@@ -1,0 +1,249 @@
+<html lang="en" class=""><head>
+
+  <meta charset="UTF-8">
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/namratapdr/pen/JjXoGxJ">
+
+  
+  
+
+  <style class="INLINE_PEN_STYLESHEET_ID">
+    
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Fira+Mono:wght@500&display=swap');
+body{
+    min-height: 95vh;
+    background: #080808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-wrap: wrap;
+    font-family: 'Fira Mono', monospace;
+}
+*{
+  box-sizing: border-box;
+}
+h3 {
+    font-family: 'Permanent Marker', cursive;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-image: url("https://github.com/muxanime/111/blob/main/images/akamine.jpg?raw=true");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+    /*background: linear-gradient(145deg, #e6e6e6, #ffffff);
+   */ box-shadow:  30px 30px 40px #141313, 
+                -30px -30px 40px #1c1919;
+    transform: scale(1.05);
+    margin: 2rem;
+}
+
+.colour{
+    position: absolute;
+    width: 100%;
+    height:15%;
+    background: rgb(255,60,14);
+background: linear-gradient(125deg, rgba(255,60,14,1) 28%, rgba(255,255,102,1) 89%);
+    right: 120px;
+    top:40px;
+    transform: rotate(-45deg) translateY(-90px); 
+}
+.colour::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom:40px;
+    background-color: #FF3C0E;
+     transform: translateX(-145px);
+}
+.colour-bottom{
+     position: absolute;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(97,34,28,1);
+    left: 140px;
+    top: 245px;
+     transform: rotate(-45deg) translateY(95px); ;
+}
+.colour-bottom::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom:40px;
+    background: rgb(97,34,28);
+background: linear-gradient(331deg, rgba(97,34,28,1) 40%, rgba(125,215,178,1) 66%);
+     transform: translateX(-147px);
+}
+.nezuko {
+    background-image: url("https://github.com/muxanime/111/blob/main/images/alkyne.jpg?raw=true");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nezuko .colour {
+    background: rgb(227,121,130);
+    background: linear-gradient(125deg, rgba(227,121,130,1) 28%, rgba(172,24,69,1) 89%);
+}
+.nezuko .colour::before{
+    background: rgba(172,24,69,1);
+}
+.nezuko .colour-bottom{
+    background: rgba(128,23,34,1);
+}
+.nezuko .colour-bottom::before{
+    background: rgb(128,23,34);
+background: linear-gradient(125deg, rgba(128,23,34,1) 40%, rgba(60,29,40,1) 66%);
+}
+.zenitsu {
+     background-image: url("https://github.com/muxanime/111/blob/main/images/sirutov.jpg?raw=true");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.zenitsu .colour {
+    background: rgb(254,241,163);
+background: linear-gradient(125deg, rgba(254,241,163,1) 40%, rgba(254,233,88,1) 59%);
+}
+.zenitsu .colour::before{
+    background: rgba(254,233,88,1);
+}
+.zenitsu .colour-bottom{
+    background: rgb(224,153,45);
+}
+.zenitsu .colour-bottom::before{
+  background: rgb(224,153,45);
+background: linear-gradient(125deg, rgba(224,153,45,1) 40%, rgba(176,123,0,1) 60%);
+}
+.card-text {
+    opacity: 0;
+    position: relative;
+    top: 80px;
+    font-size: 120%;
+}
+.card:hover{
+    border-radius: 50px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  30px 30px 40px #141313, 
+                -30px -30px 40px #1c1919;
+    animation: large .7s ease-in-out forwards;
+}
+@keyframes large {
+    100% {
+        transform: scale(.85);
+    }
+}
+.card:hover .card-text{
+    opacity: 1;
+}
+.card:hover .colour{
+    animation: move .7s ease-in-out forwards;
+}
+@keyframes move { 
+    0%{
+        transform: rotate(-45deg) translateY(-85px);
+    }
+    100% {
+         transform: rotate(-45deg) translateY(0px);
+    }
+}
+.card:hover .colour-bottom{
+    animation: move1 .7s ease-in-out forwards;
+}
+@keyframes move1 { 
+    0%{
+        transform: rotate(-45deg) translateY(90px);
+    }
+    100% {
+         transform: rotate(-45deg) translateY(0px);
+    }
+}
+footer {
+    width: 80%;
+    height:100px;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+a {
+    text-decoration: none;
+    color: rgba(224,153,45,1);
+}
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-d8236034cc3508e70b0763f2575a8bb5850f9aea541206ce56704c013047d712.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+
+<body>
+  
+    <div class="container">
+        <div class="cards">
+           
+            <div class="card">
+                <div class="colour"></div>
+                <div class="card-text">
+                    <h3>Akamine</h3>
+                    <p>Defense &amp; Rescue<br><b>Magic &amp; Training</b></p>
+                </div>
+                <div class="colour-bottom"></div>
+            </div>
+            <div class="card nezuko">
+                <div class="colour"></div>
+                <div class="card-text">
+                    <h3>Alkynes</h3>
+                    <p>Raid &amp; Rescue<br><b>Magic &amp; Demons</b></p>
+                </div>
+                <div class="colour-bottom"></div>
+            </div>
+            <div class="card zenitsu">
+                <div class="colour"></div>
+                <div class="card-text">
+                    <h3>Sirutov</h3>
+                    <p>Defense &amp; Raid<br><b>Weapons &amp; Technology</b></p>
+                </div>
+                <div class="colour-bottom"></div>
+            </div>
+        </div>
+      
+    </div>
+  <footer>
+    <!-- <p>Made by <a href="https://twitter.com/namratapdr" target="_blank" rel="noopener noreferrer"></a>.
+        <br>(All pictures were taken from google and I dont own any of them.)</p> -->
+</footer>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+  <script src="https://cdpn.io/cp/internal/boomboom/pen.js?key=pen.js-82970154-fe6c-d800-7e4e-f460066105c9" crossorigin=""></script>
+
+
+</body></html>

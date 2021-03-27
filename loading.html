@@ -1,0 +1,167 @@
+<html lang="en" class=""><head>
+
+  <meta charset="UTF-8">
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/agehara/pen/ExxJJbZ">
+
+  
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <style class="INLINE_PEN_STYLESHEET_ID">
+    .part:nth-child(odd):before,
+.part:nth-child(odd):after,
+.part:nth-child(even):before,
+.part:nth-child(even):after {
+  content: '';
+  width: 50%;
+  height: 50%;
+}
+.part:nth-child(odd),
+.part:nth-child(even) {
+  position: absolute;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.part:nth-child(odd):before,
+.part:nth-child(even):before {
+  border-radius: 50% 50% 0 0/50%;
+  transform: translateY(50%);
+}
+.part:nth-child(odd):after,
+.part:nth-child(even):after {
+  margin-top: 50%;
+  border-radius: 0 0 50% 50%/50%;
+  transform: translateY(-50%);
+}
+body {
+  position: relative;
+}
+.container {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right bottom, #63295f 0%, #000 30%, #000 60%, #63295f);
+}
+.text {
+  position: absolute;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #a08d40;
+}
+.axis {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: auto;
+  -webkit-animation: rotate 4s infinite linear;
+          animation: rotate 4s infinite linear;
+}
+.part:nth-child(odd) {
+  background: linear-gradient(#000 50%, #fffffa 50%);
+}
+.part:nth-child(odd):before {
+  background: #fffffa;
+}
+.part:nth-child(odd):after {
+  background: #000;
+}
+.part:nth-child(even) {
+  background: linear-gradient(#000113 50%, #000 50%);
+}
+.part:nth-child(even):before {
+  background: #000;
+}
+.part:nth-child(even):after {
+  background: #000113;
+}
+.part:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+.part:nth-child(2) {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.part:nth-child(3) {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.part:nth-child(4) {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(225deg);
+}
+@-webkit-keyframes rotate {
+  25% {
+    transform: rotate(90deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+@keyframes rotate {
+  25% {
+    transform: rotate(90deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-d8236034cc3508e70b0763f2575a8bb5850f9aea541206ce56704c013047d712.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+
+<body>
+  
+<div class="container">
+  <p class="text">読み込み中</p>
+  <div class="axis">
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+  </div>
+</div>
+  
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+  <script src="https://cdpn.io/cp/internal/boomboom/pen.js?key=pen.js-887d6b51-afa0-a526-ff4e-86b617ce31c8" crossorigin=""></script>
+
+
+</body></html>
